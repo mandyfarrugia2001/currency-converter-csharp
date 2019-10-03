@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -160,6 +161,19 @@ namespace Mauren_CurrencyConverter
                 if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 4)
                 {
                     txt_to.Text = $"${result *= 1.00000}";
+                }
+
+                await Task.Delay(TimeSpan.FromSeconds(5));
+                Windows.UI.Popups.MessageDialog round_opt = new Windows.UI.Popups.MessageDialog
+                    ("Would you like to round the conversion to two decimal places?", "Mauren");
+                round_opt.Commands.Clear();
+                round_opt.Commands.Add(new Windows.UI.Popups.UICommand { Label = "Yes", Id = 1 });
+                round_opt.Commands.Add(new Windows.UI.Popups.UICommand { Label = "No", Id = 0 });
+
+                var decision = await round_opt.ShowAsync();
+                if ((int)decision.Id == 1)
+                {
+                    txt_to.Text = Math.Round(result, 2).ToString();
                 }
             }
             catch (FormatException ex)
