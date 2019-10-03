@@ -37,6 +37,11 @@ namespace Mauren_CurrencyConverter
                  * Said value is converted to double. */
                 result = double.Parse(txt_from.Text);
 
+                //Converting from Euro to Euro
+                if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 0)
+                {
+                    txt_to.Text = $"€{result *= 1.00000}";
+                }
                 //Converting from Euro to AUD
                 if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 1)
                 {
@@ -62,6 +67,7 @@ namespace Mauren_CurrencyConverter
                 {
                     txt_to.Text = $"€{result *= 0.613586}";
                 }
+                //Converting from Australian Dollar to Australian Dollar
                 if (cmb_from.SelectedIndex == 1 && cmb_to.SelectedIndex == 1)
                 {
                     txt_to.Text = $"${result *= 1.00000}";
@@ -91,6 +97,11 @@ namespace Mauren_CurrencyConverter
                 {
                     txt_to.Text = $"${result *= 1.83696}";
                 }
+                //Converting from Sterling Pound to Sterling Pound
+                if (cmb_from.SelectedIndex == 2 && cmb_to.SelectedIndex == 2)
+                {
+                    txt_to.Text = $"${result *= 1.00000}";
+                }
                 //Converting from Sterling Pound to Indian Rupee.
                 if (cmb_from.SelectedIndex == 2 && cmb_to.SelectedIndex == 3)
                 {
@@ -116,6 +127,11 @@ namespace Mauren_CurrencyConverter
                 {
                     txt_to.Text = $"£{result *= 0.0114117}";
                 }
+                //Convert from Indian Rupee to Indian Rupee
+                if (cmb_from.SelectedIndex == 3 && cmb_to.SelectedIndex == 3)
+                {
+                    txt_to.Text = $"₹{result *= 1.00000}";
+                }
                 //Convert from Indian Rupee to US Dollar
                 if (cmb_from.SelectedIndex == 3 && cmb_to.SelectedIndex == 4)
                 {
@@ -140,6 +156,10 @@ namespace Mauren_CurrencyConverter
                 if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 3)
                 {
                     txt_to.Text = $"₹{result *= 70.9953}";
+                }
+                if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 4)
+                {
+                    txt_to.Text = $"${result *= 1.00000}";
                 }
             }
             catch (FormatException ex)

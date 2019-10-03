@@ -539,3 +539,5 @@ namespace Mauren_CurrencyConverter.Mauren_CurrencyConverter_Windows_XamlTypeInfo
 
 
 
+
+
