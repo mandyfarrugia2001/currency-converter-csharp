@@ -101,6 +101,46 @@ namespace Mauren_CurrencyConverter
                 {
                     txt_to.Text = $"${result *= 1.23417}";
                 }
+                //Convert from Indian Rupee to Euro
+                if (cmb_from.SelectedIndex == 3 && cmb_to.SelectedIndex == 0)
+                {
+                    txt_to.Text = $"€{result *= 0.0128663}";
+                }
+                //Convert from Indian Rupee to Australian Dollar
+                if (cmb_from.SelectedIndex == 3 && cmb_to.SelectedIndex == 1)
+                {
+                    txt_to.Text = $"${result *= 0.0209584}";
+                }
+                //Convert from Indian Rupee to Sterling Pound
+                if (cmb_from.SelectedIndex == 3 && cmb_to.SelectedIndex == 2)
+                {
+                    txt_to.Text = $"£{result *= 0.0114117}";
+                }
+                //Convert from Indian Rupee to US Dollar
+                if (cmb_from.SelectedIndex == 3 && cmb_to.SelectedIndex == 4)
+                {
+                    txt_to.Text = $"${result *= 0.0140854}";
+                }
+                //Converting from US Dollar to Euro
+                if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 0)
+                {
+                    txt_to.Text = $"€{result *= 0.913134}";
+                }
+                //Converting from US Dollar to Australian Dollar
+                if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 1)
+                {
+                    txt_to.Text = $"${result *= 1.448822}";
+                }
+                //Converting from US Dollar to Sterling Pound
+                if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 2)
+                {
+                    txt_to.Text = $"£{result *= 0.810263}";
+                }
+                //Converting from US Dollar to Indian Rupee
+                if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 3)
+                {
+                    txt_to.Text = $"₹{result *= 70.9953}";
+                }
             }
             catch (FormatException ex)
             {
