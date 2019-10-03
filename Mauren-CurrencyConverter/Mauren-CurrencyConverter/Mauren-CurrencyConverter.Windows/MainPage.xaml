@@ -8,30 +8,34 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Hub Header="Mauren - Currency Converter">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="205*"/>
+        </Grid.RowDefinitions>
+        <Hub Header="Mauren - Currency Converter" Grid.RowSpan="2">
             <HubSection Header="Please fill out the fields to continue.">
                 <DataTemplate>
                     <Grid/>
                 </DataTemplate>
             </HubSection>
         </Hub>
-        <TextBox x:Name="txt_from" Margin="39,218,921,518" Height="20"/>
-        <ComboBox x:Name="cmb_from" HorizontalAlignment="Left" Margin="467,218,0,0" VerticalAlignment="Top" Width="212">
+        <TextBox x:Name="txt_from" Margin="39,65,921,518" Height="20" Grid.Row="1"/>
+        <ComboBox x:Name="cmb_from" HorizontalAlignment="Left" Margin="467,65,0,0" VerticalAlignment="Top" Width="212" Grid.Row="1">
             <ComboBoxItem Content="Euro"/>
             <ComboBoxItem Content="Australian Dollar"/>
             <ComboBoxItem Content="Sterling Pound"/>
             <ComboBoxItem Content="Indian Rupee"/>
             <ComboBoxItem Content="US Dollar"/>
         </ComboBox>
-        <TextBox x:Name="txt_to" Margin="39,269,921,467" Height="20"/>
-        <ComboBox x:Name="cmb_to" HorizontalAlignment="Left" Margin="467,269,0,0" VerticalAlignment="Top" Width="212">
+        <TextBox x:Name="txt_to" Margin="39,116,921,467" Height="20" Grid.Row="1" IsReadOnly="True"/>
+        <ComboBox x:Name="cmb_to" HorizontalAlignment="Left" Margin="467,116,0,0" VerticalAlignment="Top" Width="212" Grid.Row="1">
             <ComboBoxItem Content="Euro"/>
             <ComboBoxItem Content="Australian Dollar"/>
             <ComboBoxItem Content="Sterling Pound"/>
             <ComboBoxItem Content="Indian Rupee"/>
             <ComboBoxItem Content="US Dollar"/>
         </ComboBox>
-        <Button x:Name="btn_convert" Content="Convert" HorizontalAlignment="Left" Margin="36,342,0,0" VerticalAlignment="Top" Width="200" Height="50"/>
-        <Button x:Name="btn_exit" Content="Exit" HorizontalAlignment="Left" Margin="248,342,0,0" VerticalAlignment="Top" Width="200" Height="50"/>
+        <Button x:Name="btn_convert" Content="Convert" HorizontalAlignment="Left" Margin="36,189,0,0" VerticalAlignment="Top" Width="200" Height="50" Grid.Row="1" Click="btn_convert_Click"/>
+        <Button x:Name="btn_exit" Content="Exit" HorizontalAlignment="Left" Margin="248,189,0,0" VerticalAlignment="Top" Width="200" Height="50" Grid.Row="1"/>
     </Grid>
 </Page>

@@ -22,9 +22,41 @@ namespace Mauren_CurrencyConverter
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        double result;
+
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private async void btn_convert_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                /* Text box values are string by default.
+                 * Said value is converted to double. */
+                result = double.Parse(txt_from.Text);
+
+                //Converting from Euro to AUD
+                if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 1)
+                {
+                    txt_to.Text = $"${(result *= 1.62976)}";
+                }
+                //Converting from Euro to Sterling Pound
+                if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 2)
+                {
+                    txt_to.Text = $"{(result *= 0.888114)}";
+                } 
+                //Converting from Euro to US Dollar
+                if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 4)
+                {
+                    txt_to.Text = $"${(result *= 1.09513)}";
+                }
+            }
+            catch (FormatException ex)
+            {
+                await new Windows.UI.Popups.MessageDialog(ex.Message).ShowAsync();
+            }
         }
     }
 }
