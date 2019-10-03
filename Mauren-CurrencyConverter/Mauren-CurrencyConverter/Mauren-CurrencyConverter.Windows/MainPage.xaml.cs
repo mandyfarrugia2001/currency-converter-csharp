@@ -81,9 +81,30 @@ namespace Mauren_CurrencyConverter
                 {
                     txt_to.Text = $"${result *= 0.671942}";
                 }
+                //Converting from Sterling Pound to Euro
+                if (cmb_from.SelectedIndex == 2 && cmb_to.SelectedIndex == 0)
+                {
+                    txt_to.Text = $"€{result * 1.12598}";
+                }
+                //Converting from Sterling Pound to Australian Dollar
+                if (cmb_from.SelectedIndex == 2 && cmb_to.SelectedIndex == 1)
+                {
+                    txt_to.Text = $"${result *= 1.83696}";
+                }
+                //Converting from Sterling Pound to Indian Rupee.
+                if (cmb_from.SelectedIndex == 2 && cmb_to.SelectedIndex == 3)
+                {
+                    txt_to.Text = $"₹{result *= 87.6294}";
+                }
+                //Converting from Sterling Pound to US Dollar
+                if (cmb_from.SelectedIndex == 2 && cmb_to.SelectedIndex == 4)
+                {
+                    txt_to.Text = $"${result *= 1.23417}";
+                }
             }
             catch (FormatException ex)
             {
+                //Display the message in a single line.
                 await new Windows.UI.Popups.MessageDialog(ex.Message).ShowAsync();
             }
         }
