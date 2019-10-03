@@ -45,12 +45,41 @@ namespace Mauren_CurrencyConverter
                 //Converting from Euro to Sterling Pound
                 if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 2)
                 {
-                    txt_to.Text = $"{(result *= 0.888114)}";
-                } 
+                    txt_to.Text = $"£{(result *= 0.888114)}";
+                }
+                //Converting from Euro to Indian Rupee
+                if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 3)
+                {
+                    txt_to.Text = $"₹{result *= 77.7224}";
+                }
                 //Converting from Euro to US Dollar
                 if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 4)
                 {
                     txt_to.Text = $"${(result *= 1.09513)}";
+                }
+                //Converting from Australian Dollar to Euro
+                if (cmb_from.SelectedIndex == 1 && cmb_to.SelectedIndex == 0)
+                {
+                    txt_to.Text = $"€{result *= 0.613586}";
+                }
+                if (cmb_from.SelectedIndex == 1 && cmb_to.SelectedIndex == 1)
+                {
+                    txt_to.Text = $"${result *= 1.00000}";
+                }
+                //Converting from Australian Dollar to Sterling Pound
+                if (cmb_from.SelectedIndex == 1 && cmb_to.SelectedIndex == 2)
+                {
+                    txt_to.Text = $"£{result *= 0.544377}";
+                }
+                //Converting from Australian Dollar to Indian Rupee
+                if (cmb_from.SelectedIndex == 1 && cmb_to.SelectedIndex == 3)
+                {
+                    txt_to.Text = $"₹{result *= 47.7136}";
+                }
+                //Converting from Australian Dollar to US Dollar
+                if (cmb_from.SelectedIndex == 1 && cmb_to.SelectedIndex == 4)
+                {
+                    txt_to.Text = $"${result *= 0.671942}";
                 }
             }
             catch (FormatException ex)
