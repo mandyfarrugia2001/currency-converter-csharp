@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="Mauren_CurrencyConverter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Mauren_CurrencyConverter"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Hub Header="Mauren - Currency Converter">
+            <HubSection Header="Please fill out the fields to continue.">
+                <DataTemplate>
+                    <Grid/>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+        <TextBox x:Name="txt_from" Margin="39,218,921,518" Height="20"/>
+        <ComboBox x:Name="cmb_from" HorizontalAlignment="Left" Margin="467,218,0,0" VerticalAlignment="Top" Width="212">
+            <ComboBoxItem Content="Euro"/>
+            <ComboBoxItem Content="Australian Dollar"/>
+            <ComboBoxItem Content="Sterling Pound"/>
+            <ComboBoxItem Content="Indian Rupee"/>
+            <ComboBoxItem Content="US Dollar"/>
+        </ComboBox>
+        <TextBox x:Name="txt_to" Margin="39,269,921,467" Height="20"/>
+        <ComboBox x:Name="cmb_to" HorizontalAlignment="Left" Margin="467,269,0,0" VerticalAlignment="Top" Width="212">
+            <ComboBoxItem Content="Euro"/>
+            <ComboBoxItem Content="Australian Dollar"/>
+            <ComboBoxItem Content="Sterling Pound"/>
+            <ComboBoxItem Content="Indian Rupee"/>
+            <ComboBoxItem Content="US Dollar"/>
+        </ComboBox>
+        <Button x:Name="btn_convert" Content="Convert" HorizontalAlignment="Left" Margin="36,342,0,0" VerticalAlignment="Top" Width="200" Height="50"/>
+        <Button x:Name="btn_exit" Content="Exit" HorizontalAlignment="Left" Margin="248,342,0,0" VerticalAlignment="Top" Width="200" Height="50"/>
+    </Grid>
+</Page>
