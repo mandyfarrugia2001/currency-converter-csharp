@@ -48,18 +48,21 @@ namespace Mauren_CurrencyConverter
                 //Converting from Euro to AUD
                 if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 1)
                 {
+                    prefix_rate("$");
                     txt_to.Text = $"${(result *= 1.62976)}";
                     round_rate("$");
                 }
                 //Converting from Euro to Sterling Pound
                 if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 2)
                 {
+                    prefix_rate("£");
                     txt_to.Text = $"£{(result *= 0.888114)}";
                     round_rate("£");
                 }
                 //Converting from Euro to Indian Rupee
                 if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 3)
                 {
+                    prefix_rate("₹");
                     txt_to.Text = $"₹{result *= 77.7224}";
                     round_rate("₹");
                 }
@@ -183,12 +186,14 @@ namespace Mauren_CurrencyConverter
                     txt_to.Text = $"₹{result *= 70.9953}";
                     round_rate("₹");
                 }
+                //Converting from US Dollar to US Dollar
                 if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 4)
                 {
                     txt_to.Text = $"${result *= 1.00000}";
                     round_rate("$");
                 }
             }
+            //Handling format mismatch exception.
             catch (FormatException ex)
             {
                 //Display the message in a single line.
@@ -202,11 +207,14 @@ namespace Mauren_CurrencyConverter
             Windows.ApplicationModel.Core.CoreApplication.Exit();
         }
 
+        //Specify the currency sign when calling this method.
         public void prefix_rate(string currency)
         {
+            //Prefix value with the respective currency sign.
             txt_from.Text = $"{currency}{txt_from.Text}";
         }
 
+        //Specify the currency sign when calling this method.
         public async void round_rate(string currency)
         {
             await Task.Delay(TimeSpan.FromSeconds(5));
