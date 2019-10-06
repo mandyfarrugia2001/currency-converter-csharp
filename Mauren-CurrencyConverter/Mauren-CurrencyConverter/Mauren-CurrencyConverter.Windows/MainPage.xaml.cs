@@ -48,147 +48,168 @@ namespace Mauren_CurrencyConverter
                 //Converting from Euro to AUD
                 if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 1)
                 {
-                    prefix_rate("$");
+                    prefix_rate("€");
                     txt_to.Text = $"${(result *= 1.62976)}";
                     round_rate("$");
                 }
                 //Converting from Euro to Sterling Pound
                 if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 2)
                 {
-                    prefix_rate("£");
+                    prefix_rate("€");
                     txt_to.Text = $"£{(result *= 0.888114)}";
                     round_rate("£");
                 }
                 //Converting from Euro to Indian Rupee
                 if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 3)
                 {
-                    prefix_rate("₹");
+                    prefix_rate("€");
                     txt_to.Text = $"₹{result *= 77.7224}";
                     round_rate("₹");
                 }
                 //Converting from Euro to US Dollar
                 if (cmb_from.SelectedIndex == 0 && cmb_to.SelectedIndex == 4)
                 {
+                    prefix_rate("€");
                     txt_to.Text = $"${(result *= 1.09513)}";
                     round_rate("$");
                 }
                 //Converting from Australian Dollar to Euro
                 if (cmb_from.SelectedIndex == 1 && cmb_to.SelectedIndex == 0)
                 {
+                    prefix_rate("$");
                     txt_to.Text = $"€{result *= 0.613586}";
                     round_rate("€");
                 }
                 //Converting from Australian Dollar to Australian Dollar
                 if (cmb_from.SelectedIndex == 1 && cmb_to.SelectedIndex == 1)
                 {
+                    prefix_rate("$");
                     txt_to.Text = $"${result *= 1.00000}";
                     round_rate("$");
                 }
                 //Converting from Australian Dollar to Sterling Pound
                 if (cmb_from.SelectedIndex == 1 && cmb_to.SelectedIndex == 2)
                 {
+                    prefix_rate("$");
                     txt_to.Text = $"£{result *= 0.544377}";
                     round_rate("£");
                 }
                 //Converting from Australian Dollar to Indian Rupee
                 if (cmb_from.SelectedIndex == 1 && cmb_to.SelectedIndex == 3)
                 {
+                    prefix_rate("$");
                     txt_to.Text = $"₹{result *= 47.7136}";
                     round_rate("₹");
                 }
                 //Converting from Australian Dollar to US Dollar
                 if (cmb_from.SelectedIndex == 1 && cmb_to.SelectedIndex == 4)
                 {
+                    prefix_rate("$");
                     txt_to.Text = $"${result *= 0.671942}";
                     round_rate("$");
                 }
                 //Converting from Sterling Pound to Euro
                 if (cmb_from.SelectedIndex == 2 && cmb_to.SelectedIndex == 0)
                 {
+                    prefix_rate("£");
                     txt_to.Text = $"€{result * 1.12598}";
                     round_rate("€");
                 }
                 //Converting from Sterling Pound to Australian Dollar
                 if (cmb_from.SelectedIndex == 2 && cmb_to.SelectedIndex == 1)
                 {
+                    prefix_rate("£");
                     txt_to.Text = $"${result *= 1.83696}";
                     round_rate("$");
                 }
                 //Converting from Sterling Pound to Sterling Pound
                 if (cmb_from.SelectedIndex == 2 && cmb_to.SelectedIndex == 2)
                 {
+                    prefix_rate("£");
                     txt_to.Text = $"£{result *= 1.00000}";
                     round_rate("£");
                 }
                 //Converting from Sterling Pound to Indian Rupee.
                 if (cmb_from.SelectedIndex == 2 && cmb_to.SelectedIndex == 3)
                 {
+                    prefix_rate("£");
                     txt_to.Text = $"₹{result *= 87.6294}";
                     round_rate("₹");
                 }
                 //Converting from Sterling Pound to US Dollar
                 if (cmb_from.SelectedIndex == 2 && cmb_to.SelectedIndex == 4)
                 {
+                    prefix_rate("£");
                     txt_to.Text = $"${result *= 1.23417}";
                     round_rate("$");
                 }
                 //Convert from Indian Rupee to Euro
                 if (cmb_from.SelectedIndex == 3 && cmb_to.SelectedIndex == 0)
                 {
+                    prefix_rate("₹");
                     txt_to.Text = $"€{result *= 0.0128663}";
                     round_rate("€");
                 }
                 //Convert from Indian Rupee to Australian Dollar
                 if (cmb_from.SelectedIndex == 3 && cmb_to.SelectedIndex == 1)
                 {
+                    prefix_rate("₹");
                     txt_to.Text = $"${result *= 0.0209584}";
                     round_rate("$");
                 }
                 //Convert from Indian Rupee to Sterling Pound
                 if (cmb_from.SelectedIndex == 3 && cmb_to.SelectedIndex == 2)
                 {
+                    prefix_rate("₹");
                     txt_to.Text = $"£{result *= 0.0114117}";
                     round_rate("£");
                 }
                 //Convert from Indian Rupee to Indian Rupee
                 if (cmb_from.SelectedIndex == 3 && cmb_to.SelectedIndex == 3)
                 {
+                    prefix_rate("₹");
                     txt_to.Text = $"₹{result *= 1.00000}";
                     round_rate("₹");
                 }
                 //Convert from Indian Rupee to US Dollar
                 if (cmb_from.SelectedIndex == 3 && cmb_to.SelectedIndex == 4)
                 {
+                    prefix_rate("₹");
                     txt_to.Text = $"${result *= 0.0140854}";
                     round_rate("$");
                 }
                 //Converting from US Dollar to Euro
                 if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 0)
                 {
+                    prefix_rate("$");
                     txt_to.Text = $"€{result *= 0.913134}";
                     round_rate("€");
                 }
                 //Converting from US Dollar to Australian Dollar
                 if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 1)
                 {
+                    prefix_rate("$");
                     txt_to.Text = $"${result *= 1.448822}";
                     round_rate("$");
                 }
                 //Converting from US Dollar to Sterling Pound
                 if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 2)
                 {
+                    prefix_rate("$");
                     txt_to.Text = $"£{result *= 0.810263}";
                     round_rate("£");
                 }
                 //Converting from US Dollar to Indian Rupee
                 if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 3)
                 {
+                    prefix_rate("$");
                     txt_to.Text = $"₹{result *= 70.9953}";
                     round_rate("₹");
                 }
                 //Converting from US Dollar to US Dollar
                 if (cmb_from.SelectedIndex == 4 && cmb_to.SelectedIndex == 4)
                 {
+                    prefix_rate("$");
                     txt_to.Text = $"${result *= 1.00000}";
                     round_rate("$");
                 }
@@ -217,18 +238,28 @@ namespace Mauren_CurrencyConverter
         //Specify the currency sign when calling this method.
         public async void round_rate(string currency)
         {
+            /* Program must be paused for five seconds. 
+             * Do not confuse with Thread.Sleep()
+             * where parameter is accepted in milliseconds. */
             await Task.Delay(TimeSpan.FromSeconds(5));
-            Windows.UI.Popups.MessageDialog round_opt = new Windows.UI.Popups.MessageDialog
+
+            //Create a new message dialog to ask for user's preferences.
+            Windows.UI.Popups.MessageDialog round_opt = 
+                new Windows.UI.Popups.MessageDialog
                 ("Would you like to round the conversion to two decimal places?", "Mauren");
             round_opt.Commands.Clear();
+            //Add the options.
             round_opt.Commands.Add(new Windows.UI.Popups.UICommand { Label = "Yes", Id = 1 });
             round_opt.Commands.Add(new Windows.UI.Popups.UICommand { Label = "No", Id = 0 });
 
+            //Display the message dialog.
             var decision = await round_opt.ShowAsync();
+            //If user clicks Yes, the exchange result is rounded to two decimal places.
             if ((int)decision.Id == 1)
             {
                 txt_to.Text = $"{currency}{Math.Round(result, 2).ToString()}";
             }
+            //If user selects No, nothing will happen. (no need to use else-if)
         }
 
         private void btn_clear_Click(object sender, RoutedEventArgs e)
